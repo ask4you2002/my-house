@@ -11,6 +11,7 @@
  */
 public class Picture
 {
+    private Square cesped;
     private Square wall;
     private Square window;
     private Triangle roof;
@@ -29,6 +30,13 @@ public class Picture
      */
     public void draw()
     {
+        cesped = new Square();
+        cesped.changeColor("green");
+        cesped.moveHorizontal(-400);
+        cesped.moveVertical(100);
+        cesped.changeSize(10000);
+        cesped.makeVisible();
+        
         wall = new Square();
         wall.moveHorizontal(-140);
         wall.moveVertical(20);
@@ -54,6 +62,7 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
+        sun.slowMoveVertical(-70);
     }
 
     /**
@@ -63,6 +72,7 @@ public class Picture
     {
         if (wall != null)   // only if it's painted already...
         {
+            cesped.changeColor("white");
             wall.changeColor("black");
             window.changeColor("white");
             roof.changeColor("black");
