@@ -16,6 +16,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    
 
     /**
      * Constructor for objects of class Picture
@@ -93,4 +94,8 @@ public class Picture
             sun.changeColor("yellow");
         }
     }
+    public void atardecer() {
+        sun.slowMoveVertical(170);
+    }
+    
 }
