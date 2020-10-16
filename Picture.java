@@ -16,6 +16,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Person persona;
     
 
     /**
@@ -64,6 +65,12 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
         sun.slowMoveVertical(-70);
+        
+        persona= new Person();
+        persona.moveHorizontal(-400);
+        persona.makeVisible();
+       
+        
     }
 
     /**
@@ -96,6 +103,7 @@ public class Picture
     }
     public void atardecer() {
         sun.slowMoveVertical(170);
+        persona.slowMoveHorizontal(400);
     }
     
 }
